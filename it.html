@@ -255,7 +255,7 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
     <a class="logo" href="#" onclick="goHome()">
       <span class="logo-mark">kodland</span>
       <span class="logo-div"></span>
-      <span class="logo-sub" id="nav-sub-home">Roblox Eğitimi</span>
+      <span class="logo-sub" id="nav-sub-home">Formazione Roblox</span>
     </a>
     <div class="nav-r">
       <span id="ntag" style="font-size:13px;color:var(--text-muted);font-weight:600;display:none"></span>
@@ -265,22 +265,22 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
   </nav>
   <div class="hero">
     <div class="hero-inner">
-      <div class="eyebrow" id="hero-eyebrow">🎮 Eğitmen Adayı Programı</div>
-      <h1 id="hero-title"><br><span class="h-pill">Roblox Studio</span><br>Eğitmen Hazırlık Programı</h1>
-      <p id="hero-sub">Eğitmen adaylarının sürece hazır olabilmesi için tüm modülleri tamamlaması ve her sınavdan en az %70 başarı sağlaması gerekmektedir.</p>
+      <div class="eyebrow" id="hero-eyebrow">🎮 Programma di Formazione Tutor</div>
+      <h1 id="hero-title">Preparati a insegnare<br><span class="h-pill">Roblox Studio</span><br>ai bambini</h1>
+      <p id="hero-sub">Completa tutti e 6 i moduli e supera ogni quiz per completare la tua preparazione come tutor. Ottieni il 70%+ per sbloccare il modulo successivo.</p>
       <div class="prog-strip">
         <div class="pnum" id="pnum">0/6</div>
         <div class="ptrack"><div class="pfill" id="pfill" style="width:0%"></div></div>
-        <div class="plbl" id="plbl">modül tamamlandı</div>
+        <div class="plbl" id="plbl">moduli completati</div>
       </div>
     </div>
   </div>
   <div class="msec">
-    <div class="slbl" id="slbl">Modüllerin</div>
+    <div class="slbl" id="slbl">I tuoi moduli</div>
     <div class="grid" id="mgrid"></div>
   </div>
   <div class="skip-row">
-    <button class="skip-btn" id="skip-btn" onclick="document.getElementById('skip-modal').classList.add('show')">Eğitimi atlayın ve DST'ye geçin →</button>
+    <button class="skip-btn" id="skip-btn" onclick="document.getElementById('skip-modal').classList.add('show')">Salta la formazione e vai al DST →</button>
   </div>
 </div>
 
@@ -288,11 +288,11 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 <div class="modal-overlay" id="skip-modal">
   <div class="modal">
     <div style="font-size:40px;margin-bottom:12px">⚡</div>
-    <h3 id="skip-title">Eğitimi atlamak istiyor musunuz?</h3>
-    <p id="skip-body">Eğitim materyallerini atlayıp doğrudan Dijital Yeterlilik Testi'ne (DST) geçmek istediğinizden emin misiniz?</p>
+    <h3 id="skip-title">Saltare la formazione?</h3>
+    <p id="skip-body">Sei sicuro di voler saltare i materiali di formazione e andare direttamente al Digital Skill Test?</p>
     <div class="modal-btns">
-      <button class="modal-no" onclick="document.getElementById('skip-modal').classList.remove('show')" id="skip-no">Hayır, çalışmaya devam edin</button>
-      <button class="modal-yes" onclick="document.getElementById('skip-modal').classList.remove('show');showDST()" id="skip-yes">Evet, DST'ye geçin</button>
+      <button class="modal-no" onclick="document.getElementById('skip-modal').classList.remove('show')" id="skip-no">No, continua a studiare</button>
+      <button class="modal-yes" onclick="document.getElementById('skip-modal').classList.remove('show');showDST()" id="skip-yes">Sì, vai al DST</button>
     </div>
   </div>
 </div>
@@ -300,23 +300,22 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 <!-- REGION SWITCH MODAL -->
 <div class="modal-overlay" id="lang-modal">
   <div class="modal">
-    <div style="font-size:36px;margin-bottom:12px">⚠️</div>
-    <h3>Region Notice</h3>
-    <p id="lang-modal-body" style="text-align:left">The <strong>Turkish 🇹🇷</strong> and <strong>English 🌍</strong> versions are prepared for <strong>different regions</strong> with different DSTs (Digital Skill Tests) and different class schedules.<br><br>If you applied for the <strong>Turkish region</strong>, please use the Turkish version only.<br>If you applied for the <strong>English region</strong>, please use the English version only.<br><br>Are you sure you want to switch?</p>
+    <div style="font-size:36px;margin-bottom:12px">🌐</div>
+    <h3>Switch Language</h3>
+    <p id="lang-modal-body">You are about to switch the training language. Your progress for each language is saved separately. Are you sure you want to switch?</p>
     <div class="modal-btns">
-      <button class="modal-no" onclick="document.getElementById('lang-modal').classList.remove('show')">No, stay here</button>
+      <button class="modal-no" onclick="document.getElementById('lang-modal').classList.remove('show')">Cancel</button>
       <button class="modal-yes" onclick="confirmLangSwitch()">Yes, switch</button>
     </div>
   </div>
 </div>
-
 <!-- CONTENT -->
 <div id="screen-content" class="screen">
   <nav class="nav">
     <a class="logo" href="#" onclick="goHome()">
       <span class="logo-mark">kodland</span>
       <span class="logo-div"></span>
-      <span class="logo-sub" id="nav-sub-content">Roblox Eğitimi</span>
+      <span class="logo-sub" id="nav-sub-content">Formazione Roblox</span>
     </a>
     <div class="nav-r">
       <button class="pbtn" onclick="goHome()" id="back-btn-content">← Modüller</button>
@@ -333,7 +332,7 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
     <a class="logo" href="#" onclick="goHome()">
       <span class="logo-mark">kodland</span>
       <span class="logo-div"></span>
-      <span class="logo-sub" id="nav-sub-quiz">Roblox Eğitimi</span>
+      <span class="logo-sub" id="nav-sub-quiz">Formazione Roblox</span>
     </a>
     <div class="nav-r">
       <button class="pbtn" onclick="exitQuiz()" id="exit-quiz-btn">← Sınavdan Çık</button>
@@ -357,7 +356,7 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
     <a class="logo" href="#" onclick="goHome()">
       <span class="logo-mark">kodland</span>
       <span class="logo-div"></span>
-      <span class="logo-sub" id="nav-sub-results">Roblox Eğitimi</span>
+      <span class="logo-sub" id="nav-sub-results">Formazione Roblox</span>
     </a>
     <div class="nav-r">
       <button class="pbtn" onclick="goHome()" id="back-btn-results">← Modüller</button>
@@ -391,7 +390,7 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
     <a class="logo" href="#" onclick="goHome()">
       <span class="logo-mark">kodland</span>
       <span class="logo-div"></span>
-      <span class="logo-sub" id="nav-sub-dst">Roblox Eğitimi</span>
+      <span class="logo-sub" id="nav-sub-dst">Formazione Roblox</span>
     </a>
     <div class="nav-r">
       <button class="pbtn" onclick="goHome()" id="back-btn-dst">← Modüller</button>
@@ -502,12 +501,12 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 
 <!-- SHARED LANGUAGE DROPDOWN / REGION SWITCHER -->
 <div id="lang-dropdown" class="lang-dropdown" role="menu">
-  <button class="lang-option" id="lang-opt-tr" onclick="selectLang('tr')">
+  <button class="lang-option" id="lang-opt-tr" onclick="confirmRegionSwitch('tr.html', '🇹🇷', 'TR')">
     <span class="flag">🇹🇷</span>
     <span>TR</span>
     <span class="check">✓</span>
   </button>
-  <button class="lang-option" id="lang-opt-en" onclick="selectLang('en')">
+  <button class="lang-option" id="lang-opt-en" onclick="confirmRegionSwitch('en.html', '🇬🇧', 'ENG')">
     <span class="flag">🇬🇧</span>
     <span>ENG</span>
     <span class="check">✓</span>
@@ -547,13 +546,8 @@ function toggleTheme(){
 
 // ─── LANGUAGE ───────────────────────────────────────────────────────────────
 // Detect language: use saved preference, else browser/system language
-(function(){
-  const saved = localStorage.getItem('kl-lang');
-  if(saved){ window._initLang = saved; return; }
-  const browser = (navigator.language || navigator.userLanguage || '').toLowerCase();
-  window._initLang = 'it';
-})();
-let lang = window._initLang || 'en';
+
+let lang = 'it';
 
 const UI = {
   tr: {
@@ -728,62 +722,62 @@ function applyLangUI(){
   if(exitQ) exitQ.textContent = t('exitQuiz');
 }
 
-let _pendingLang = null;
 
 function toggleLangDropdown(e){
   e.stopPropagation();
   const dd = document.getElementById('lang-dropdown');
   const btn = e.currentTarget;
   const isOpen = dd.classList.contains('open');
-  // Close any open dropdown first
   closeLangDropdown();
   if(isOpen) return;
-  // Position near button
   const r = btn.getBoundingClientRect();
   dd.style.top = (r.bottom + 6) + 'px';
   dd.style.right = (window.innerWidth - r.right) + 'px';
   dd.style.left = 'auto';
   dd.classList.add('open');
   btn.classList.add('open');
-  // Store which trigger opened it
   dd._triggerId = btn.id;
 }
 
 function closeLangDropdown(){
   const dd = document.getElementById('lang-dropdown');
   dd.classList.remove('open');
-  if(dd._triggerId) {
+  if(dd._triggerId){
     const t = document.getElementById(dd._triggerId);
     if(t) t.classList.remove('open');
     dd._triggerId = null;
   }
 }
 
-function selectLang(target){
-  closeLangDropdown();
-  if(target === lang) return; // already active
-  _pendingLang = target;
-  document.getElementById('lang-modal').classList.add('show');
-}
-
 function updateLangDropdown(){
-  if(document.getElementById('lang-opt-tr'))document.getElementById('lang-opt-tr').classList.toggle('active', lang==='tr');
-  if(document.getElementById('lang-opt-en'))document.getElementById('lang-opt-en').classList.toggle('active', lang==='en');
+  const optTr = document.getElementById('lang-opt-tr');
+  const optEn = document.getElementById('lang-opt-en');
+  if(optTr) optTr.classList.toggle('active', lang==='tr');
+  if(optEn) optEn.classList.toggle('active', lang==='en');
 }
 
-function promptLangSwitch(){
-  // Legacy — kept for safety
-  document.getElementById('lang-modal').classList.add('show');
+let _pendingUrl = null;
+
+function confirmRegionSwitch(url, flag, label){
+  closeLangDropdown();
+  if((url==='en.html'&&lang==='en')||(url==='tr.html'&&lang==='tr')) return; // already here
+  _pendingUrl = url;
+  const modal = document.getElementById('lang-modal');
+  document.getElementById('lang-modal-body').textContent =
+    'You are about to switch to the ' + flag + ' ' + label + ' training. Your progress for each region is saved separately. Are you sure?';
+  modal.classList.add('show');
+}
+
+function selectLang(target){
+  // Legacy: map to file navigation
+  const map = {tr:'tr.html', en:'en.html', it:'it.html', pl:'pl.html'};
+  if(map[target]) confirmRegionSwitch(map[target], '', target.toUpperCase());
 }
 
 function confirmLangSwitch(){
   document.getElementById('lang-modal').classList.remove('show');
-  lang = _pendingLang || (lang==='tr' ? 'en' : 'tr');
-  _pendingLang = null;
-  localStorage.setItem('kl-lang', lang);
-  applyLangUI();
-  currentModule=null; quizData=[]; qi=0; score=0;
-  renderHome(); showScreen('screen-home');
+  if(_pendingUrl) window.location.href = _pendingUrl;
+  _pendingUrl = null;
 }
 
 // ─── DATA ───────────────────────────────────────────────────────────────────
@@ -1544,6 +1538,7 @@ document.addEventListener('click', function(e){
 // ─── INIT ────────────────────────────────────────────────────────────────
 applyLangUI();
 renderHome();
+showScreen('screen-home');
 </script>
 </body>
 </html>
