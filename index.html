@@ -45,16 +45,18 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 .hero p{color:var(--text2);font-size:15px;line-height:1.65;margin-bottom:44px;max-width:480px;margin-left:auto;margin-right:auto;}
 /* REGION CARDS */
 .region-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:860px;margin:0 auto;width:100%;}
-.region-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--r);padding:28px 26px;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;box-shadow:var(--shadow);text-decoration:none;display:flex;flex-direction:column;gap:14px;text-align:left;}
-.region-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-h);border-color:var(--lime-d)}
-.region-flag{font-size:32px;line-height:1}
-.region-name{font-family:'Nunito',sans-serif;font-size:20px;font-weight:900;color:var(--text)}
-.region-desc{font-size:13px;color:var(--text2);line-height:1.6}
-.region-badge{display:inline-flex;align-items:center;gap:6px;background:var(--lime);color:var(--ink);border:1.5px solid var(--lime-d);border-radius:var(--rpill);padding:4px 12px;font-family:'Nunito',sans-serif;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;width:fit-content}
-[data-theme="dark"] .region-badge{background:rgba(196,240,70,.18);color:var(--lime);border-color:rgba(196,240,70,.4)}
-.region-badge.pink{background:var(--pink);color:#fff;border-color:var(--pink-d)}
-[data-theme="dark"] .region-badge.pink{background:rgba(240,61,158,.18);color:var(--pink);border-color:rgba(240,61,158,.4)}
-.region-cta{margin-top:4px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:900;color:var(--pink);display:flex;align-items:center;gap:4px}
+.region-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--r);padding:28px 26px;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;box-shadow:var(--shadow),inset 0 2px 8px rgba(0,0,0,.06);text-decoration:none;display:flex;flex-direction:column;gap:14px;text-align:center;align-items:center;outline:1.5px solid var(--border);outline-offset:-5px;}
+.region-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.22),inset 0 2px 8px rgba(0,0,0,.06);border-color:var(--pink)}
+[data-theme="dark"] .region-card:hover{border-color:var(--lime-d)}
+.region-flag{font-size:36px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.15))}
+.region-name{font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;color:var(--text);text-shadow:0 1px 3px rgba(0,0,0,.10)}
+.region-desc{font-size:15px;color:var(--text2);line-height:1.6;text-shadow:0 1px 2px rgba(0,0,0,.08)}
+[data-theme="dark"] .region-flag{filter:none}
+[data-theme="dark"] .region-name{text-shadow:none}
+[data-theme="dark"] .region-desc{text-shadow:none}
+.region-badge{display:inline-flex;align-items:center;gap:6px;background:var(--pink);color:#fff;border:1.5px solid var(--pink-d);border-radius:var(--rpill);padding:4px 12px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;width:fit-content;}
+[data-theme="dark"] .region-badge{background:rgba(240,61,158,.18);color:var(--pink);border-color:rgba(240,61,158,.4)}
+.region-cta{margin-top:4px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:900;color:var(--pink);display:flex;align-items:center;gap:4px}
 [data-theme="dark"] .region-cta{color:var(--lime)}
 /* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);z-index:200;align-items:center;justify-content:center}
@@ -87,59 +89,43 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 <div class="hero">
   <div class="hero-inner">
     <div class="eyebrow">🎮 Tutor Training Program</div>
-    <h1>Choose your<br><span class="h-pill">region</span><br>to get started</h1>
-    <p>Each region has its own training track, Digital Skill Test, and class schedule. Select the version that matches where you applied.</p>
+    <h1>Choose Your<br><span class="h-pill">Region</span><br>To Get Started</h1>
+    <p style="font-size:13px;color:var(--text2);margin-bottom:0;">⚠️ Each version has a different DST and class schedule. If you applied for a specific region, please use only that version. Your progress is saved per browser.</p>
 
-    <div class="region-grid">
+    <div class="region-grid" style="margin-top:32px;">
 
       <a class="region-card" onclick="confirmNav('en.html')" href="#">
         <div class="region-flag">🇬🇧</div>
-        <div>
-          <div class="region-name">English</div>
-          <div class="region-desc" style="margin-top:4px">For tutors in the <strong>English-speaking regions</strong> — includes the English DST and class schedule.</div>
-        </div>
-        <span class="region-badge">Available</span>
+        <div class="region-name">English</div>
+        <div class="region-desc">For tutors in the <strong>English-speaking regions</strong> — includes the English DST and class schedule.</div>
         <div class="region-cta">Open English training →</div>
       </a>
 
       <a class="region-card" onclick="confirmNav('tr.html')" href="#">
         <div class="region-flag">🇹🇷</div>
-        <div>
-          <div class="region-name">Türkçe</div>
-          <div class="region-desc" style="margin-top:4px">Türkiye bölgesi için — Türkçe DST ve ders programı dahildir. <em>For tutors in Turkey.</em></div>
-        </div>
-        <span class="region-badge">Mevcut</span>
+        <div class="region-name">Türkçe</div>
+        <div class="region-desc"><strong>Türkiye bölgesindeki eğitmenler için</strong> — Türkçe DST ve eğitim programını içerir.</div>
         <div class="region-cta">Türkçe eğitime geç →</div>
       </a>
 
       <a class="region-card" onclick="confirmNav('it.html')" href="#">
         <div class="region-flag">🇮🇹</div>
-        <div>
-          <div class="region-name">Italiano</div>
-          <div class="region-desc" style="margin-top:4px">Per i tutor nella <strong>regione italiana</strong>. Il DST per questa regione sarà disponibile a breve.</div>
-        </div>
-        <span class="region-badge pink">DST in arrivo</span>
+        <div class="region-name">Italiano</div>
+        <div class="region-desc">Per i tutor nella <strong>regione italiana</strong>. Il DST per questa regione sarà disponibile a breve.</div>
+        <span class="region-badge">DST in arrivo</span>
         <div class="region-cta">Apri formazione italiana →</div>
       </a>
 
       <a class="region-card" onclick="confirmNav('pl.html')" href="#">
         <div class="region-flag">🇵🇱</div>
-        <div>
-          <div class="region-name">Polski</div>
-          <div class="region-desc" style="margin-top:4px">Dla korepetytorów w <strong>regionie polskim</strong>. DST dla tego regionu będzie dostępny wkrótce.</div>
-        </div>
-        <span class="region-badge pink">DST wkrótce</span>
+        <div class="region-name">Polski</div>
+        <div class="region-desc">Dla korepetytorów w <strong>regionie polskim</strong>. DST dla tego regionu będzie dostępny wkrótce.</div>
+        <span class="region-badge">DST wkrótce</span>
         <div class="region-cta">Otwórz szkolenie polskie →</div>
       </a>
 
     </div>
 
-    <div class="divider-row">
-      <div class="divider-line"></div>
-      <div class="divider-label">⚠️ Region notice</div>
-      <div class="divider-line"></div>
-    </div>
-    <p style="font-size:13px;color:var(--text-muted);margin-top:16px;max-width:560px;margin-left:auto;margin-right:auto;">Each version has a different DST and class schedule. If you applied for a specific region, please use only that version. Your progress is saved per browser.</p>
 
   </div>
 </div>

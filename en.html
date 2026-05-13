@@ -301,11 +301,11 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 <div class="modal-overlay" id="lang-modal">
   <div class="modal">
     <div style="font-size:36px;margin-bottom:12px">🌐</div>
-    <h3>Switch Language</h3>
-    <p id="lang-modal-body">You are about to switch the training language. Your progress for each language is saved separately. Are you sure you want to switch?</p>
+    <h3 id="lang-modal-title">Switch Region</h3>
+    <p id="lang-modal-body" style="white-space:pre-line"></p>
     <div class="modal-btns">
-      <button class="modal-no" onclick="document.getElementById('lang-modal').classList.remove('show')">Cancel</button>
-      <button class="modal-yes" onclick="confirmLangSwitch()">Yes, switch</button>
+      <button class="modal-no" id="lang-modal-cancel" onclick="document.getElementById('lang-modal').classList.remove('show')">Cancel</button>
+      <button class="modal-yes" id="lang-modal-confirm" onclick="confirmLangSwitch()">Yes, switch</button>
     </div>
   </div>
 </div>
@@ -621,7 +621,6 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
     <span>ENG</span>
     <span class="check">✓</span>
   </button>
-  <div style="height:1px;background:var(--border);margin:4px 0"></div>
   <a class="lang-option" href="it.html" style="color:var(--text2)">
     <span class="flag">🇮🇹</span>
     <span>IT</span>
@@ -823,18 +822,17 @@ let _pendingUrl = null;
 
 function confirmRegionSwitch(url, flag, label){
   closeLangDropdown();
-  if((url==='en.html'&&lang==='en')||(url==='tr.html'&&lang==='tr')) return; // already here
+  if(url === 'en.html') return;
   _pendingUrl = url;
-  const modal = document.getElementById('lang-modal');
-  document.getElementById('lang-modal-body').textContent =
-    'You are about to switch to the ' + flag + ' ' + label + ' training. Your progress for each region is saved separately. Are you sure?';
-  modal.classList.add('show');
-}
-
-function selectLang(target){
-  // Legacy: map to file navigation
-  const map = {tr:'tr.html', en:'en.html', it:'it.html', pl:'pl.html'};
-  if(map[target]) confirmRegionSwitch(map[target], '', target.toUpperCase());
+  const messages = {
+    'tr.html': { line1: 'You are about to switch to the 🇹🇷 Turkish training. Your progress for each region is saved separately. Are you sure?', line2: 'Türkçe eğitime geçmek üzeresiniz. Her bölgenin ilerlemesi ayrı kaydedilir. Emin misiniz?' },
+    'it.html': { line1: 'You are about to switch to the 🇮🇹 Italian training. Your progress for each region is saved separately. Are you sure?', line2: 'Stai per passare alla formazione italiana. I progressi di ogni regione vengono salvati separatamente. Sei sicuro?' },
+    'pl.html': { line1: 'You are about to switch to the 🇵🇱 Polish training. Your progress for each region is saved separately. Are you sure?', line2: 'Zamierzasz przejść do szkolenia w języku polskim. Postępy każdego regionu są zapisywane osobno. Czy jesteś pewien?' },
+  };
+  const msg = messages[url];
+  const body = msg ? msg.line1 + '<br><br>' + msg.line2 : 'You are about to switch regions. Your progress is saved separately. Are you sure?';
+  document.getElementById('lang-modal').classList.add('show');
+  document.getElementById('lang-modal-body').innerHTML = body;
 }
 
 function confirmLangSwitch(){
