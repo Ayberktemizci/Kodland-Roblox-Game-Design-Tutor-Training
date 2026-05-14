@@ -519,6 +519,26 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
     <span class="flag">🇵🇱</span>
     <span>PL</span>
   </a>
+  <a class="lang-option" href="es.html" style="color:var(--text2)">
+    <span class="flag">🇪🇸</span>
+    <span>ES</span>
+  </a>
+  <a class="lang-option" href="pt.html" style="color:var(--text2)">
+    <span class="flag">🇧🇷</span>
+    <span>PT</span>
+  </a>
+  <a class="lang-option" href="id.html" style="color:var(--text2)">
+    <span class="flag">🇮🇩</span>
+    <span>ID</span>
+  </a>
+  <a class="lang-option" href="pt.html" style="color:var(--text2)">
+    <span class="flag">🇧🇷</span>
+    <span>PT</span>
+  </a>
+  <a class="lang-option" href="id.html" style="color:var(--text2)">
+    <span class="flag">🇮🇩</span>
+    <span>ID</span>
+  </a>
   <div style="height:1px;background:var(--border);margin:4px 0"></div>
   <a class="lang-option" href="index.html" style="color:var(--text-muted);font-size:12px">
     <span class="flag">🌐</span>
@@ -765,6 +785,11 @@ function confirmRegionSwitch(url, flag, label){
     'en.html': { line1: 'Stai per passare alla formazione in inglese. I progressi di ogni regione vengono salvati separatamente. Sei sicuro?', line2: 'You are about to switch to the 🇬🇧 English training. Your progress for each region is saved separately. Are you sure?' },
     'tr.html': { line1: 'Stai per passare alla formazione in turco. I progressi di ogni regione vengono salvati separatamente. Sei sicuro?', line2: 'Türkçe eğitime geçmek üzeresiniz. Her bölgenin ilerlemesi ayrı kaydedilir. Emin misiniz?' },
     'pl.html': { line1: 'Stai per passare alla formazione in polacco. I progressi di ogni regione vengono salvati separatamente. Sei sicuro?', line2: 'Zamierzasz przejść do szkolenia w języku polskim. Postępy każdego regionu są zapisywane osobno. Czy jesteś pewien?' },
+      'es.html': { line1: 'Stai per passare alla formazione in spagnolo. I progressi di ogni regione vengono salvati separatamente. Sei sicuro?', line2: 'Estás a punto de cambiar a la formación en español. El progreso de cada región se guarda por separado. ¿Estás seguro?' },
+    'pt.html': { line1: 'Stai per passare alla formazione in portoghese. I progressi di ogni regione vengono salvati separatamente. Sei sicuro?', line2: 'Você está prestes a mudar para o treinamento em português. O progresso de cada região é salvo separadamente. Tem certeza?' },
+    'id.html': { line1: 'Stai per passare alla formazione in indonesiano. I progressi di ogni regione vengono salvati separatamente. Sei sicuro?', line2: 'Anda akan beralih ke pelatihan bahasa Indonesia. Kemajuan setiap wilayah disimpan secara terpisah. Apakah Anda yakin?' },
+      'pt.html': { line1: 'Stai per passare alla formazione in portoghese. I progressi di ogni regione vengono salvati separatamente. Sei sicuro?', line2: 'Você está prestes a mudar para o treinamento em português. O progresso de cada região é salvo separadamente. Tem certeza?' },
+    'id.html': { line1: 'Stai per passare alla formazione in indonesiano. I progressi di ogni regione vengono salvati separatamente. Sei sicuro?', line2: 'Anda akan beralih ke pelatihan bahasa Indonesia. Kemajuan setiap wilayah disimpan secara terpisah. Apakah Anda yakin?' },
   };
   const msg = messages[url];
   const body = msg ? msg.line1 + '<br><br>' + msg.line2 : 'You are about to switch regions. Your progress is saved separately. Are you sure?';

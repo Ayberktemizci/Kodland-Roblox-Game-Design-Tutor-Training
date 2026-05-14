@@ -44,19 +44,19 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 [data-theme="dark"] .h-pill{background:var(--lime);color:var(--ink)}
 .hero p{color:var(--text2);font-size:15px;line-height:1.65;margin-bottom:44px;max-width:480px;margin-left:auto;margin-right:auto;}
 /* REGION CARDS */
-.region-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;max-width:860px;margin:0 auto;width:100%;}
-.region-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--r);padding:28px 26px;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;box-shadow:var(--shadow),inset 0 2px 8px rgba(0,0,0,.06);text-decoration:none;display:flex;flex-direction:column;gap:14px;text-align:center;align-items:center;outline:1.5px solid var(--border);outline-offset:-5px;}
-.region-card:hover{transform:translateY(-4px);box-shadow:0 8px 28px rgba(0,0,0,.22),inset 0 2px 8px rgba(0,0,0,.06);border-color:var(--pink)}
+.region-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:720px;margin:0 auto;width:100%;}
+.region-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--r);padding:28px 24px;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;box-shadow:var(--shadow),inset 0 2px 8px rgba(0,0,0,.06);text-decoration:none;display:flex;flex-direction:column;gap:8px;text-align:center;align-items:center;outline:1.5px solid var(--border);outline-offset:-5px;}
+.region-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.22),inset 0 2px 8px rgba(0,0,0,.06);border-color:var(--pink)}
 [data-theme="dark"] .region-card:hover{border-color:var(--lime-d)}
-.region-flag{font-size:36px;line-height:1;filter:drop-shadow(0 1px 3px rgba(0,0,0,.15))}
-.region-name{font-family:'Nunito',sans-serif;font-size:22px;font-weight:900;color:var(--text);text-shadow:0 1px 3px rgba(0,0,0,.10)}
-.region-desc{font-size:15px;color:var(--text2);line-height:1.6;text-shadow:0 1px 2px rgba(0,0,0,.08)}
+.region-flag{font-size:40px;line-height:1;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;filter:drop-shadow(0 1px 3px rgba(0,0,0,.15));}
+.region-name{font-family:'Nunito',sans-serif;font-size:18px;font-weight:900;color:var(--text);text-shadow:0 1px 3px rgba(0,0,0,.10);text-align:center;}
+.region-desc{font-size:13px;color:var(--text2);line-height:1.5;text-shadow:0 1px 2px rgba(0,0,0,.08);text-align:center;}
 [data-theme="dark"] .region-flag{filter:none}
 [data-theme="dark"] .region-name{text-shadow:none}
 [data-theme="dark"] .region-desc{text-shadow:none}
-.region-badge{display:inline-flex;align-items:center;gap:6px;background:var(--pink);color:#fff;border:1.5px solid var(--pink-d);border-radius:var(--rpill);padding:4px 12px;font-family:'Nunito',sans-serif;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;width:fit-content;}
+.region-badge{display:inline-flex;align-items:center;gap:6px;background:var(--pink);color:#fff;border:1.5px solid var(--pink-d);border-radius:var(--rpill);padding:3px 10px;font-family:'Nunito',sans-serif;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.5px;width:fit-content;margin-top:2px;}
 [data-theme="dark"] .region-badge{background:rgba(240,61,158,.18);color:var(--pink);border-color:rgba(240,61,158,.4)}
-.region-cta{margin-top:4px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:900;color:var(--pink);display:flex;align-items:center;gap:4px}
+.region-cta{font-family:'Nunito',sans-serif;font-size:13px;font-weight:900;color:var(--pink);display:flex;align-items:center;gap:4px;margin-top:4px;}
 [data-theme="dark"] .region-cta{color:var(--lime)}
 /* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);z-index:200;align-items:center;justify-content:center}
@@ -96,21 +96,21 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 
       <a class="region-card" onclick="confirmNav('en.html')" href="#">
         <div class="region-flag">🇬🇧</div>
-        <div class="region-name">English</div>
+<div class="region-name">English</div>
         <div class="region-desc">For tutors in the <strong>English-speaking regions</strong> — includes the English DST and class schedule.</div>
         <div class="region-cta">Open English training →</div>
       </a>
 
       <a class="region-card" onclick="confirmNav('tr.html')" href="#">
         <div class="region-flag">🇹🇷</div>
-        <div class="region-name">Türkçe</div>
+<div class="region-name">Türkçe</div>
         <div class="region-desc"><strong>Türkiye bölgesindeki eğitmenler için</strong> — Türkçe DST ve eğitim programını içerir.</div>
         <div class="region-cta">Türkçe eğitime geç →</div>
       </a>
 
       <a class="region-card" onclick="confirmNav('it.html')" href="#">
         <div class="region-flag">🇮🇹</div>
-        <div class="region-name">Italiano</div>
+<div class="region-name">Italiano</div>
         <div class="region-desc">Per i tutor nella <strong>regione italiana</strong>. Il DST per questa regione sarà disponibile a breve.</div>
         <span class="region-badge">DST in arrivo</span>
         <div class="region-cta">Apri formazione italiana →</div>
@@ -118,10 +118,34 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 
       <a class="region-card" onclick="confirmNav('pl.html')" href="#">
         <div class="region-flag">🇵🇱</div>
-        <div class="region-name">Polski</div>
+<div class="region-name">Polski</div>
         <div class="region-desc">Dla korepetytorów w <strong>regionie polskim</strong>. DST dla tego regionu będzie dostępny wkrótce.</div>
         <span class="region-badge">DST wkrótce</span>
         <div class="region-cta">Otwórz szkolenie polskie →</div>
+      </a>
+
+      <a class="region-card" onclick="confirmNav('es.html')" href="#">
+        <div class="region-flag">🇪🇸</div>
+<div class="region-name">Español</div>
+        <div class="region-desc">Para tutores en la <strong>región de habla hispana</strong> — incluye el DST en español y el programa de clases.</div>
+        <span class="region-badge">DST próximamente</span>
+        <div class="region-cta">Abrir formación en español →</div>
+      </a>
+
+      <a class="region-card" onclick="confirmNav('pt.html')" href="#">
+        <div class="region-flag">🇧🇷</div>
+<div class="region-name">Português</div>
+        <div class="region-desc">Para tutores na <strong>região de língua portuguesa</strong> — inclui o DST em português e o programa de aulas.</div>
+        <span class="region-badge">DST em breve</span>
+        <div class="region-cta">Abrir formação em português →</div>
+      </a>
+
+      <a class="region-card" onclick="confirmNav('id.html')" href="#">
+        <div class="region-flag">🇮🇩</div>
+<div class="region-name">Indonesia</div>
+        <div class="region-desc">Untuk tutor di <strong>wilayah berbahasa Indonesia</strong> — termasuk DST dalam bahasa Indonesia dan jadwal kelas.</div>
+        <span class="region-badge">DST segera hadir</span>
+        <div class="region-cta">Buka pelatihan bahasa Indonesia →</div>
       </a>
 
     </div>
@@ -162,8 +186,11 @@ function toggleTheme(){
 const regionData={
   'en.html':{flag:'🇬🇧',title:'Open English Training',body:'This will open the English-region training track with its own DST and schedule. Make sure you applied for the English region before proceeding.'},
   'tr.html':{flag:'🇹🇷',title:'Türkçe Eğitimi Aç',body:'Bu, Türkiye bölgesi için eğitim programını açacaktır. Lütfen yalnızca Türkiye bölgesine başvurduysanız kullanın.'},
-  'it.html':{flag:'🇮🇹',title:'Apri Formazione Italiana',body:'Questo aprirà il percorso formativo per la regione italiana. Il DST sarà disponibile a breve.'},
-  'pl.html':{flag:'🇵🇱',title:'Otwórz Szkolenie Polskie',body:'To otworzy ścieżkę szkoleniową dla regionu polskiego. DST będzie dostępny wkrótce.'}
+  'it.html':{flag:'🇮🇹',title:'Apri Formazione Italiana',body:'Questo aprirà il percorso di formazione per la regione italiana con il proprio DST e programma. Assicurati di aver fatto domanda per la regione italiana prima di procedere.'},
+  'pl.html':{flag:'🇵🇱',title:'Otwórz Szkolenie Polskie',body:'To otworzy ścieżkę szkoleniową dla regionu polskiego z własnym DST i harmonogramem. Upewnij się, że złożyłeś aplikację do regionu polskiego przed kontynuowaniem.'},
+  'es.html':{flag:'🇪🇸',title:'Abrir Formación en Español',body:'Esto abrirá la ruta de formación para la región de habla hispana con su propio DST y programa. Asegúrate de haber solicitado la región en español antes de continuar.'},
+  'pt.html':{flag:'🇧🇷',title:'Abrir Formação em Português',body:'Isso abrirá a trilha de formação para a região de língua portuguesa com seu próprio DST e cronograma. Certifique-se de ter se inscrito para a região em português antes de prosseguir.'},
+  'id.html':{flag:'🇮🇩',title:'Buka Pelatihan Indonesia',body:'Ini akan membuka jalur pelatihan untuk wilayah Indonesia dengan DST dan jadwalnya sendiri. Pastikan Anda telah mendaftar untuk wilayah Indonesia sebelum melanjutkan.'},
 };
 let pendingUrl='';
 function confirmNav(url){
