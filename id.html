@@ -501,23 +501,23 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
 
 <!-- SHARED LANGUAGE DROPDOWN / REGION SWITCHER -->
 <div id="lang-dropdown" class="lang-dropdown" role="menu">
-  <button class="lang-option" id="lang-opt-tr" onclick="confirmRegionSwitch('tr.html', '🇹🇷', 'TR')">
-    <span class="flag">🇹🇷</span>
+  <button class="lang-option" id="lang-opt-tr" onclick="confirmRegionSwitch('tr.html', '[TR]', 'TR')">
+    <span class="flag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="28" height="19" style="vertical-align:middle;border-radius:2px"><rect width="60" height="40" fill="#E30A17"/><circle cx="23" cy="20" r="10" fill="#fff"/><circle cx="26" cy="20" r="8" fill="#E30A17"/><polygon points="33,20 35.5,12.5 37.5,20 30,16 40,16" fill="#fff"/></svg></span>
     <span>TR</span>
     <span class="check">✓</span>
   </button>
-  <button class="lang-option" id="lang-opt-en" onclick="confirmRegionSwitch('en.html', '🇬🇧', 'ENG')">
-    <span class="flag">🇬🇧</span>
+  <button class="lang-option" id="lang-opt-en" onclick="confirmRegionSwitch('en.html', '[GB]', 'ENG')">
+    <span class="flag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="28" height="19" style="vertical-align:middle;border-radius:2px"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="13"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="8"/></svg></span>
     <span>ENG</span>
     <span class="check">✓</span>
   </button>
-  <button class="lang-option" id="lang-opt-es" onclick="confirmRegionSwitch('it.html', '🇮🇹', 'IT')">
-    <span class="flag">🇮🇹</span>
+  <button class="lang-option" id="lang-opt-es" onclick="confirmRegionSwitch('it.html', '[IT]', 'IT')">
+    <span class="flag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="28" height="19" style="vertical-align:middle;border-radius:2px"><rect width="20" height="40" fill="#009246"/><rect x="20" width="20" height="40" fill="#fff"/><rect x="40" width="20" height="40" fill="#CE2B37"/></svg></span>
     <span>IT</span>
     <span class="check">✓</span>
   </button>
   <a class="lang-option" href="pl.html" style="color:var(--text2)">
-    <span class="flag">🇵🇱</span>
+    <span class="flag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" width="28" height="19" style="vertical-align:middle;border-radius:2px"><rect width="60" height="20" fill="#fff"/><rect y="20" width="60" height="20" fill="#DC143C"/></svg></span>
     <span>PL</span>
   </a>
   <div style="height:1px;background:var(--border);margin:4px 0"></div>
@@ -763,7 +763,7 @@ function confirmRegionSwitch(url, flag, label){
   if(url === 'id.html') return;
   _pendingUrl = url;
   const messages = {
-    'en.html': { line1: 'Anda akan beralih ke pelatihan bahasa Inggris. Kemajuan setiap wilayah disimpan secara terpisah. Apakah Anda yakin?', line2: 'You are about to switch to the 🇬🇧 English training. Your progress for each region is saved separately. Are you sure?' },
+    'en.html': { line1: 'Anda akan beralih ke pelatihan bahasa Inggris. Kemajuan setiap wilayah disimpan secara terpisah. Apakah Anda yakin?', line2: 'You are about to switch to the [GB] English training. Your progress for each region is saved separately. Are you sure?' },
     'tr.html': { line1: 'Anda akan beralih ke pelatihan bahasa Turki. Kemajuan setiap wilayah disimpan secara terpisah. Apakah Anda yakin?', line2: 'Türkçe eğitime geçmek üzeresiniz. Her bölgenin ilerlemesi ayrı kaydedilir. Emin misiniz?' },
     'it.html': { line1: 'Anda akan beralih ke pelatihan bahasa Italia. Kemajuan setiap wilayah disimpan secara terpisah. Apakah Anda yakin?', line2: 'Stai per passare alla formazione italiana. I progressi di ogni regione vengono salvati separatamente. Sei sicuro?' },
     'pl.html': { line1: 'Anda akan beralih ke pelatihan bahasa Polandia. Kemajuan setiap wilayah disimpan secara terpisah. Apakah Anda yakin?', line2: 'Zamierzasz przejść do szkolenia w języku polskim. Postępy każdego regionu są zapisywane osobno. Czy jesteś pewien?' },
@@ -983,7 +983,7 @@ const MODULES=[
 ]
 
 const MODULE0 = {
-  id:0, emoji:'🇹🇷', title:'Türkiye\'de Erişim',
+  id:0, emoji:'[TR]', title:'Türkiye\'de Erişim',
   desc:'Türkiye\'de Roblox ve Roblox Studio\'ya erişim sağlamak için kullanabileceğiniz yöntemler.',
   color:'#E83535', noQuiz:true
 };
@@ -1292,7 +1292,7 @@ function renderHome(){
 // ─── MODULE 0 (TR) ────────────────────────────────────────────────────────
 function openModule0(){
   const html=`<div class="meyebrow">Modül 0 · Türkiye'ye Özel · Sınav Yok</div>
-  <div class="mh1">🇹🇷 Türkiye'de Roblox Studio'ya Erişim</div>
+  <div class="mh1">[TR] Türkiye'de Roblox Studio'ya Erişim</div>
   <div class="mobj" style="--acc:#E83535">Bu modül, Türkiye'de Roblox ve Roblox Studio'ya erişim sağlamak için kullanabileceğiniz çeşitli yöntemleri kapsamaktadır. <strong>Kursa başlamadan önce bu adımları tamamlayın.</strong></div>
 
   <div class="callout cw"><span class="ci">⚠️</span><div>Bu rehberde anlatılan yöntemler yalnızca eğitim amaçlıdır ve Roblox'a yasal yollarla erişim sağlamak için tasarlanmıştır.</div></div>
