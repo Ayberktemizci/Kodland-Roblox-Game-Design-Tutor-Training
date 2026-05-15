@@ -1624,6 +1624,65 @@ document.addEventListener('click', function(e){
 applyLangUI();
 renderHome();
 showScreen('screen-home');
+// ─── DEV MODE (Shift+D × 3 to toggle) ───────────────────────────────────────
+(function(){
+  let _dSeq = 0, _dTimer = null;
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'D' && e.shiftKey){
+      clearTimeout(_dTimer);
+      _dSeq++;
+      _dTimer = setTimeout(() => _dSeq = 0, 1200);
+      if(_dSeq >= 3){ _dSeq = 0; toggleDevMode(); }
+    }
+  });
+
+  function toggleDevMode(){
+    const active = localStorage.getItem('kl-devmode') === '1';
+    if(!active){
+      // Unlock all modules: mark every module as passed in all progress keys
+      const keys = ['kl-en-progress','kl-tr-progress','kl-it-progress','kl-pl-progress','kl-es-progress','kl-pt-progress','kl-id-progress'];
+      const mods = getMods();
+      keys.forEach(key => {
+        const p = {};
+        mods.forEach(m => { p[m.id] = { passed: true, score: 100 }; });
+        // Also handle TR format (numeric score)
+        if(key === 'kl-tr-progress') mods.forEach(m => { p[m.id] = 100; });
+        localStorage.setItem(key, JSON.stringify(p));
+      });
+      localStorage.setItem('kl-devmode','1');
+      showDevBadge(true);
+      renderHome();
+      alert('🔓 Dev mode ON — all modules unlocked');
+    } else {
+      localStorage.removeItem('kl-devmode');
+      // Clear progress to restore locked state
+      ['kl-en-progress','kl-tr-progress','kl-it-progress','kl-pl-progress','kl-es-progress','kl-pt-progress','kl-id-progress']
+        .forEach(k => localStorage.removeItem(k));
+      showDevBadge(false);
+      renderHome();
+      alert('🔒 Dev mode OFF — progress cleared');
+    }
+  }
+
+  function showDevBadge(on){
+    let b = document.getElementById('dev-badge');
+    if(!b){
+      b = document.createElement('div');
+      b.id = 'dev-badge';
+      b.style.cssText = 'position:fixed;bottom:12px;right:12px;background:#f03d9e;color:#fff;font-family:Nunito,sans-serif;font-weight:900;font-size:12px;padding:4px 10px;border-radius:20px;z-index:9999;pointer-events:none;letter-spacing:.5px';
+      b.textContent = '🔓 DEV MODE';
+      document.body.appendChild(b);
+    }
+    b.style.display = on ? 'block' : 'none';
+  }
+
+  // Restore badge if dev mode was already on from a previous session
+  if(localStorage.getItem('kl-devmode') === '1') {
+    window.addEventListener('DOMContentLoaded', () => showDevBadge(true));
+  }
+})();
+// ─────────────────────────────────────────────────────────────────────────────
+
 </script>
 </body>
 </html>
