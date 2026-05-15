@@ -1024,11 +1024,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'What does the Explorer panel display?',opts:['Properties of selected objects','The object hierarchy of your game','Available tools and plugins','The scripting output window'],c:1,fb:'The Explorer shows the full parent/child object hierarchy of your entire game.'},
-    {q:'What does "Anchoring" a part do?',opts:['Deletes the part','Changes its colour','Disables physics and locks it in place','Makes it invisible'],c:2,fb:'Anchoring disables physics for that object, keeping it exactly where you placed it.'},
-    {q:'How do you focus the camera on a selected object?',opts:['Press C','Press F','Press Tab','Press Spacebar'],c:1,fb:'Pressing F focuses the camera on the currently selected object.'},
-    {q:'Script is inside a Part in Workspace. What does `script.Parent` return?',opts:['Workspace','The Script itself','The Part','The game root'],c:2,fb:'`script.Parent` returns the direct parent — the Part containing the script.'},
-    {q:'What happens when CanCollide is False on an unanchored part?',opts:['Part stays in place','Part becomes invisible','Part falls through the floor','Properties lock'],c:2,fb:'Without anchoring and with CanCollide off, the part falls through everything and is destroyed.'},
+    {q:'Apa yang ditampilkan panel Explorer?',opts:['Properti objek yang dipilih','Hierarki objek game Anda','Alat dan plugin yang tersedia','Jendela output skrip'],c:1,fb:'Explorer menampilkan hierarki parent/child lengkap dari semua objek dalam game Anda.'},
+    {q:'Apa yang dilakukan \'Menahan\' (Anchor) sebuah Part?',opts:['Menghapus Part','Mengubah warnanya','Menonaktifkan fisika dan menguncinya di tempat','Membuatnya tidak terlihat'],c:2,fb:'Menahan menonaktifkan fisika untuk objek tersebut, menjaganya tetap persis di tempat Anda meletakkannya.'},
+    {q:'Bagaimana cara memfokuskan kamera pada objek yang dipilih?',opts:['Tekan C','Tekan F','Tekan Tab','Tekan Spasi'],c:1,fb:'Menekan F memfokuskan kamera pada objek yang sedang dipilih.'},
+    {q:'Sebuah Script berada di dalam Part di Workspace. Apa yang dikembalikan `script.Parent`?',opts:['Workspace','Script itu sendiri','Part','Akar game'],c:2,fb:'`script.Parent` mengembalikan parent langsung — Part yang berisi skrip tersebut.'},
+    {q:'Apa yang terjadi ketika CanCollide False pada Part yang tidak ditahan?',opts:['Part tetap di tempat','Part menjadi tidak terlihat','Part jatuh menembus lantai','Properti terkunci'],c:2,fb:'Tanpa penahan dan dengan CanCollide dimatikan, Part akan jatuh menembus segalanya.'},
    ]
   },
   {id:2,emoji:'🏗️',title:'Terrain dan Pembangunan',desc:'Alat Terrain, penggabungan bagian, pemodelan solid (Union/Negate), Models, Welds, Constraints, Material.',obj:'Memahami cara membangun lingkungan menggunakan Terrain dan Parts.',color:'#22C55E',
@@ -1067,11 +1067,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'What does the Union solid modeling tool do?',opts:['Keeps only overlapping areas','Breaks parts apart','Combines multiple parts into one single object','Deletes parts'],c:2,fb:'Union merges all selected parts into one object.'},
-    {q:'Key difference between Grouping and Welding?',opts:['They are the same','Grouping organises in Explorer; Welding connects physically','Welding organises in Explorer; Grouping connects physically','Neither affects gameplay'],c:1,fb:'Grouping = Explorer organisation. Welding = physically locks parts with the physics engine.'},
-    {q:'When to use a Constraint instead of WeldConstraint?',opts:['Parts should stay permanently locked','Need controlled movement (hinge, rope, slide)','Want to delete the connection','Both parts are anchored'],c:1,fb:'Constraints allow controlled physics-based movement. Welds are for rigid attachment.'},
-    {q:'What does the Negate tool do?',opts:['Smooths terrain','Reverses position','Turns a part into a cutting shape used with Union','Removes material'],c:2,fb:'Negate turns a part into a "cutter" — when Unioned with another part, it carves that shape out.'},
-    {q:'Best practice for Explorer organisation?',opts:['Keep all parts ungrouped','Union everything immediately','Group related parts into clearly named Models','Avoid the Explorer'],c:2,fb:'Named Models keep Explorer clean and make it easy to work with entire objects.'},
+    {q:'Apa yang dilakukan alat Union dalam pemodelan solid?',opts:['Hanya menyimpan area yang tumpang tindih','Memisahkan Parts','Menggabungkan beberapa Parts menjadi satu objek','Menghapus Parts'],c:2,fb:'Union menggabungkan semua Parts yang dipilih menjadi satu objek.'},
+    {q:'Perbedaan utama antara Pengelompokan dan Pengelasan?',opts:['Keduanya sama','Pengelompokan mengorganisir di Explorer; Pengelasan menghubungkan secara fisik','Pengelasan mengorganisir di Explorer; Pengelompokan menghubungkan secara fisik','Tidak ada yang mempengaruhi gameplay'],c:1,fb:'Pengelompokan = organisasi di Explorer. Pengelasan = menghubungkan Parts secara fisik dengan mesin fisika.'},
+    {q:'Kapan menggunakan Constraint daripada WeldConstraint?',opts:['Parts harus tetap terkunci permanen','Perlu gerakan terkontrol (engsel, tali, slider)','Ingin menghapus koneksi','Kedua Parts ditahan'],c:1,fb:'Constraints memungkinkan gerakan fisika terkontrol. Weld untuk sambungan kaku.'},
+    {q:'Apa yang dilakukan alat Negate?',opts:['Menghaluskan Terrain','Membalik posisi','Mengubah Part menjadi bentuk pemotong untuk digunakan dengan Union','Menghapus material'],c:2,fb:'Negate mengubah Part menjadi \'pemotong\' — saat di-Union dengan Part lain, ia memahatnya.'},
+    {q:'Praktik terbaik untuk organisasi Explorer?',opts:['Biarkan semua Parts tidak dikelompokkan','Langsung Union semuanya','Kelompokkan Parts terkait ke dalam Models dengan nama jelas','Hindari Explorer'],c:2,fb:'Models dengan nama jelas menjaga Explorer tetap rapi dan memudahkan bekerja dengan objek utuh.'},
    ]
   },
   {id:3,emoji:'💻',title:'Dasar-Dasar Scripting',desc:'Dasar-dasar Lua, Script vs LocalScript, event, debounce, deteksi pemain, leaderstats dan debugging.',obj:'Memahami dan bekerja dengan logika scripting dasar Roblox.',color:'#F59E0B',
@@ -1102,11 +1102,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'Coin system for ALL players — which script type?',opts:['LocalScript','ModuleScript','Script (server)','Either works'],c:2,fb:'A server Script runs server-side and affects all players. LocalScript only affects the individual client.'},
-    {q:'Purpose of "debounce"?',opts:['Increases speed','Prevents function running multiple times simultaneously','Stops script entirely','Connects more events'],c:1,fb:'Debounce prevents the function being called again until the previous execution finishes.'},
-    {q:'`GetPlayerFromCharacter` returns what if the object is NOT a player?',opts:['Empty table','The character model','An error','nil'],c:3,fb:'Returns nil if no player matches. Always check `if not player then return end`.'},
-    {q:'Where should leaderstats setup Script go?',opts:['LocalScript in StarterGui','Script in ServerScriptService','LocalScript in StarterPlayerScripts','Anywhere'],c:1,fb:'leaderstats must be created server-side in ServerScriptService so it applies to all players.'},
-    {q:'What\'s wrong with: `if coins = 100 then`',opts:['coins should be capitalised','Should use == not = for comparison','Missing semicolon','Nothing'],c:1,fb:'Single = is assignment only. Double == is comparison. Always use == inside if conditions.'},
+    {q:'Sistem koin untuk SEMUA pemain — tipe skrip apa?',opts:['LocalScript','ModuleScript','Script (server)','Keduanya bisa'],c:2,fb:'Script server berjalan di sisi server dan mempengaruhi semua pemain. LocalScript hanya mempengaruhi klien lokal.'},
+    {q:'Tujuan \'debounce\'?',opts:['Meningkatkan kecepatan','Mencegah fungsi berjalan berkali-kali secara bersamaan','Menghentikan skrip sepenuhnya','Menghubungkan lebih banyak event'],c:1,fb:'Debounce mencegah fungsi dipanggil lagi sampai eksekusi sebelumnya selesai.'},
+    {q:'`GetPlayerFromCharacter` apa yang dikembalikan jika objek BUKAN pemain?',opts:['Tabel kosong','Model karakter','Error','nil'],c:3,fb:'Mengembalikan nil jika tidak ada pemain yang cocok. Selalu periksa `if not player then return end`.'},
+    {q:'Di mana Script pengaturan leaderstats harus ditempatkan?',opts:['LocalScript di StarterGui','Script di ServerScriptService','LocalScript di StarterPlayerScripts','Di mana saja'],c:1,fb:'leaderstats harus dibuat di sisi server di ServerScriptService agar berlaku untuk semua pemain.'},
+    {q:'Apa yang salah dengan: `if coins = 100 then`',opts:['coins harus ditulis kapital','Harus menggunakan == bukan = untuk perbandingan','Kurang titik koma','Tidak ada yang salah'],c:1,fb:'= tunggal hanya untuk penugasan. == ganda untuk perbandingan. Selalu gunakan == di dalam kondisi if.'},
    ]
   },
   {id:4,emoji:'🎬',title:'Animasi dan Gerakan',desc:'Rotasi terus-menerus dengan loop, gerakan halus A→B dengan TweenService dan kesalahan umum.',obj:'Membuat animasi sederhana dan elemen dinamis.',color:'#8B5CF6',
@@ -1129,11 +1129,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'Platform should spin continuously forever. Best approach?',opts:['TweenService','A while loop updating Orientation','A single CFrame assignment','Animation Editor'],c:1,fb:'Continuous forever-looping motion = while loop. TweenService is for A→B motion.'},
-    {q:'For TweenService + Position to work, the part must be…',opts:['CanCollide = false','In ServerScriptService','Anchored','A sphere'],c:2,fb:'Physics fights TweenService on unanchored parts. Always anchor, or use CFrame.'},
-    {q:'RepeatCount = -1 in TweenInfo.new() means…',opts:['Plays once','Loops forever','Plays in reverse','Tween disabled'],c:1,fb:'-1 = loop forever. 0 = play once. Positive number = play that many extra times.'},
-    {q:'Which Vector3 makes a part spin left/right (Y axis)?',opts:['Vector3.new(2,0,0)','Vector3.new(0,0,2)','Vector3.new(0,2,0)','Vector3.new(2,2,2)'],c:2,fb:'Y axis = horizontal spin (left/right), like a rotating coin or platform.'},
-    {q:'Animating a door from closed to open. Use loop or TweenService?',opts:['While loop — simpler','TweenService — it\'s A→B motion','Either works','Neither'],c:1,fb:'Moving from A to B with a defined endpoint is exactly what TweenService is designed for.'},
+    {q:'Platform harus berputar terus-menerus selamanya. Pendekatan terbaik?',opts:['TweenService','Loop while yang memperbarui Orientation','Satu penugasan CFrame','Animation Editor'],c:1,fb:'Gerakan terus-menerus selamanya = loop while. TweenService untuk gerakan A→B.'},
+    {q:'Agar TweenService + Position bekerja, Part harus…',opts:['CanCollide = false','Di ServerScriptService','Ditahan (Anchored)','Berbentuk bola'],c:2,fb:'Fisika melawan TweenService pada Parts yang tidak ditahan. Selalu tahan, atau gunakan CFrame.'},
+    {q:'RepeatCount = -1 di TweenInfo.new() berarti…',opts:['Dimainkan sekali','Berulang selamanya','Dimainkan terbalik','Tween dinonaktifkan'],c:1,fb:'-1 = ulangi selamanya. 0 = mainkan sekali. Angka positif = mainkan sejumlah kali tambahan itu.'},
+    {q:'Vector3 mana yang membuat Part berputar kiri/kanan (sumbu Y)?',opts:['Vector3.new(2,0,0)','Vector3.new(0,0,2)','Vector3.new(0,2,0)','Vector3.new(2,2,2)'],c:2,fb:'Sumbu Y = putaran horizontal (kiri/kanan), seperti koin atau platform yang berputar.'},
+    {q:'Menganimasikan pintu dari tertutup ke terbuka. Gunakan loop atau TweenService?',opts:['Loop while — lebih sederhana','TweenService — ini gerakan A→B','Keduanya bisa','Tidak keduanya'],c:1,fb:'Bergerak dari A ke B dengan titik akhir yang ditentukan adalah persis apa yang dirancang TweenService.'},
    ]
   },
   {id:5,emoji:'💎',title:'Penerbitan dan Monetisasi',desc:'Terbitkan game Anda, atur pengaturan, Game Pass vs Developer Product dijelaskan.',obj:'Mengetahui cara menerbitkan game dan menjelaskan monetisasi kepada siswa.',color:'#EC4899',
@@ -1152,11 +1152,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'After first publishing, what must you do for players to find it?',opts:['It\'s automatically public','Make it public via Creator Dashboard','Publish again','Share the link'],c:1,fb:'Publishing and making public are two separate steps. Always go Creator Dashboard → Make Public after first publish.'},
-    {q:'Player buys +500 coins, uses them, wants more next week. What do you use?',opts:['Game Pass','Private Server','Developer Product','Free Model'],c:2,fb:'Developer Products are for repeatable purchases — perfect for consumable items like in-game currency.'},
-    {q:'Player pays for permanent VIP with extra speed. What do you use?',opts:['Developer Product','Private Server','Game Pass','Subscription'],c:2,fb:'Game Passes are for permanent, one-time purchases. The player buys it once and keeps it forever.'},
-    {q:'What is true about Servidores privados?',opts:['Must always cost Robux','Can be set to free and still drive engagement','Only developer can create them','Unlimited capacity'],c:1,fb:'Private servers can be free — developers often do this to attract more players.'},
-    {q:'Which Game Setting controls players per server?',opts:['Genre','Age Guidelines','Max Players','Game Description'],c:2,fb:'Max Players controls server capacity. Default is typically 10–20 players per server.'},
+    {q:'Setelah publikasi pertama, apa yang harus dilakukan agar pemain bisa menemukan game?',opts:['Otomatis publik','Jadikan publik melalui Creator Dashboard','Publikasikan lagi','Bagikan tautannya'],c:1,fb:'Mempublikasikan dan menjadikan publik adalah dua langkah terpisah. Selalu pergi ke Creator Dashboard.'},
+    {q:'Pemain membeli +500 koin, menggunakannya, ingin lebih minggu depan. Apa yang Anda gunakan?',opts:['Game Pass','Server Privat','Developer Product','Free Model'],c:2,fb:'Developer Products untuk pembelian berulang — sempurna untuk item yang habis dipakai.'},
+    {q:'Pemain membayar untuk VIP permanen dengan kecepatan ekstra. Apa yang Anda gunakan?',opts:['Developer Product','Server Privat','Game Pass','Langganan'],c:2,fb:'Game Passes untuk pembelian permanen satu kali. Pemain membeli sekali dan menyimpannya selamanya.'},
+    {q:'Apa yang benar tentang Server Privat?',opts:['Selalu harus membayar Robux','Bisa gratis dan tetap meningkatkan keterlibatan','Hanya developer yang bisa membuatnya','Kapasitas tidak terbatas'],c:1,fb:'Server privat bisa gratis — developer sering melakukan ini untuk menarik lebih banyak pemain.'},
+    {q:'Pengaturan game mana yang mengontrol pemain per server?',opts:['Genre','Age Guidelines','Max Players','Game Description'],c:2,fb:'Max Players mengontrol kapasitas server. Default biasanya 10–20 pemain per server.'},
    ]
   },
   {id:6,emoji:'🎓',title:'Mentalitas Tutor',desc:'Mengajar Roblox kepada anak-anak, menggunakan analogi yang tepat, membimbing debugging dan menerapkan metode Jelaskan-Tunjukkan-Lakukan.',obj:'Mengembangkan mentalitas dan keterampilan yang diperlukan untuk membimbing anak-anak dalam desain game.',color:'#EF4444',
@@ -1189,11 +1189,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'Student is stuck on a bug. Best first response?',opts:['Find and fix it immediately','Tell them to start over','Ask "what do you think the problem might be?"','Skip to next concept'],c:2,fb:'Always guide students to find the solution themselves first. Asking questions builds problem-solving skills.'},
-    {q:'Correct order of "Explain, Show, Do"?',opts:['Explain error, show fix, do it for them','Set context → demonstrate → let student try','Show examples → explain → test','Do → show result → explain'],c:1,fb:'Explain first (why it matters), then Show (demo yourself), then Do (hand control to student).'},
-    {q:'Which should you AVOID when teaching kids?',opts:['Using real-world analogies','Celebrating small wins','Using jargon without defining it','Asking "what do you think will happen?"'],c:2,fb:'Undefined jargon confuses kids. Always explain technical terms in plain, familiar language first.'},
-    {q:'Best way to explain "Anchoring" to a 10-year-old?',opts:['"It sets the Anchored property to True in the physics engine"','"It\'s like tying a balloon down so it stays no matter what"','"It disables the RigidBody for the BasePart"','"It prevents the part being selected"'],c:1,fb:'Real-world analogies (balloon + string) make abstract concepts instantly understandable for kids.'},
-    {q:'What matters MOST for being a good tutor?',opts:['Perfect technical knowledge','Speaking quickly','Problem-solving ability and willingness to learn','Never admitting you don\'t know something'],c:2,fb:'The best tutors are curious, patient problem-solvers — not those with the most technical knowledge.'},
+    {q:'Siswa terjebak pada bug. Respons pertama terbaik?',opts:['Temukan dan selesaikan segera','Suruh mulai dari awal','Tanya: \'Menurutmu apa masalahnya?\'','Lanjut ke konsep berikutnya'],c:2,fb:'Selalu bimbing siswa menemukan solusinya sendiri terlebih dahulu. Pertanyaan membangun pemikiran kritis.'},
+    {q:'Urutan yang benar dari \'Jelaskan, Tunjukkan, Lakukan\'?',opts:['Jelaskan kesalahan, tunjukkan koreksi, lakukan untuk mereka','Berikan konteks → demonstrasikan → biarkan siswa mencoba','Tunjukkan contoh → jelaskan → uji','Lakukan → tunjukkan hasil → jelaskan'],c:1,fb:'Pertama jelaskan (mengapa penting), lalu tunjukkan (demo sendiri), lalu lakukan (serahkan kendali ke siswa).'},
+    {q:'Apa yang harus DIHINDARI saat mengajar anak-anak?',opts:['Menggunakan analogi dunia nyata','Merayakan kemenangan kecil','Menggunakan jargon tanpa mendefinisikan','Bertanya \'Menurutmu apa yang akan terjadi?\''],c:2,fb:'Jargon yang tidak didefinisikan membingungkan anak-anak. Selalu jelaskan istilah teknis dalam bahasa yang sederhana dan familiar.'},
+    {q:'Cara terbaik menjelaskan \'Penahan\' kepada anak 10 tahun?',opts:['\'Ini mengatur properti Anchored ke True di mesin fisika\'','\'Seperti mengikat balon agar tetap di tempatnya apapun yang terjadi\'','\'Ini menonaktifkan RigidBody untuk BasePart\'','\'Ini mencegah Part dipilih\''],c:1,fb:'Analogi dunia nyata (balon + tali) membuat konsep abstrak langsung dapat dipahami.'},
+    {q:'Apa yang paling PENTING untuk menjadi tutor yang baik?',opts:['Pengetahuan teknis yang sempurna','Berbicara cepat','Kemampuan memecahkan masalah dan kemauan belajar','Tidak pernah mengakui tidak tahu'],c:2,fb:'Tutor terbaik adalah pemecah masalah yang ingin tahu dan sabar — bukan yang paling banyak pengetahuan teknisnya.'},
    ]
   }
 ]

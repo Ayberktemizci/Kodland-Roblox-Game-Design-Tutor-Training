@@ -1024,11 +1024,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'What does the Explorer panel display?',opts:['Properties of selected objects','The object hierarchy of your game','Available tools and plugins','The scripting output window'],c:1,fb:'The Explorer shows the full parent/child object hierarchy of your entire game.'},
-    {q:'What does "Anchoring" a part do?',opts:['Deletes the part','Changes its colour','Disables physics and locks it in place','Makes it invisible'],c:2,fb:'Anchoring disables physics for that object, keeping it exactly where you placed it.'},
-    {q:'How do you focus the camera on a selected object?',opts:['Press C','Press F','Press Tab','Press Spacebar'],c:1,fb:'Pressing F focuses the camera on the currently selected object.'},
-    {q:'Script is inside a Part in Workspace. What does `script.Parent` return?',opts:['Workspace','The Script itself','The Part','The game root'],c:2,fb:'`script.Parent` returns the direct parent — the Part containing the script.'},
-    {q:'What happens when CanCollide is False on an unanchored part?',opts:['Part stays in place','Part becomes invisible','Part falls through the floor','Properties lock'],c:2,fb:'Without anchoring and with CanCollide off, the part falls through everything and is destroyed.'},
+    {q:'O que o painel Explorer exibe?',opts:['As propriedades dos objetos selecionados','A hierarquia de objetos do seu jogo','As ferramentas e plugins disponíveis','A janela de saída dos scripts'],c:1,fb:'O Explorer mostra a hierarquia completa parent/child de todos os objetos do seu jogo.'},
+    {q:'O que faz \'Ancorar\' um Part?',opts:['Exclui o Part','Muda sua cor','Desativa a física e o trava no lugar','O torna invisível'],c:2,fb:'Ancorar desativa a física para aquele objeto, mantendo-o exatamente onde você o colocou.'},
+    {q:'Como você foca a câmera em um objeto selecionado?',opts:['Pressione C','Pressione F','Pressione Tab','Pressione Espaço'],c:1,fb:'Pressionar F foca a câmera no objeto atualmente selecionado.'},
+    {q:'Um Script está dentro de um Part no Workspace. O que `script.Parent` retorna?',opts:['Workspace','O próprio Script','O Part','A raiz do jogo'],c:2,fb:'`script.Parent` retorna o parent direto — o Part que contém o script.'},
+    {q:'O que acontece quando CanCollide é False em um Part não ancorado?',opts:['O Part fica no lugar','O Part fica invisível','O Part cai pelo chão','As propriedades travam'],c:2,fb:'Sem ancoragem e com CanCollide desativado, o Part cai por tudo.'},
    ]
   },
   {id:2,emoji:'🏗️',title:'Terrain e Construção',desc:'Ferramentas Terrain, combinação de partes, modelagem sólida (Union/Negate), Models, Welds, Constraints, Materiais.',obj:'Entender como construir ambientes usando Terrain e Parts.',color:'#22C55E',
@@ -1067,11 +1067,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'What does the Union solid modeling tool do?',opts:['Keeps only overlapping areas','Breaks parts apart','Combines multiple parts into one single object','Deletes parts'],c:2,fb:'Union merges all selected parts into one object.'},
-    {q:'Key difference between Grouping and Welding?',opts:['They are the same','Grouping organises in Explorer; Welding connects physically','Welding organises in Explorer; Grouping connects physically','Neither affects gameplay'],c:1,fb:'Grouping = Explorer organisation. Welding = physically locks parts with the physics engine.'},
-    {q:'When to use a Constraint instead of WeldConstraint?',opts:['Parts should stay permanently locked','Need controlled movement (hinge, rope, slide)','Want to delete the connection','Both parts are anchored'],c:1,fb:'Constraints allow controlled physics-based movement. Welds are for rigid attachment.'},
-    {q:'What does the Negate tool do?',opts:['Smooths terrain','Reverses position','Turns a part into a cutting shape used with Union','Removes material'],c:2,fb:'Negate turns a part into a "cutter" — when Unioned with another part, it carves that shape out.'},
-    {q:'Best practice for Explorer organisation?',opts:['Keep all parts ungrouped','Union everything immediately','Group related parts into clearly named Models','Avoid the Explorer'],c:2,fb:'Named Models keep Explorer clean and make it easy to work with entire objects.'},
+    {q:'O que a ferramenta Union faz na modelagem sólida?',opts:['Mantém apenas as áreas sobrepostas','Separa os Parts','Combina múltiplos Parts em um único objeto','Exclui os Parts'],c:2,fb:'Union mescla todos os Parts selecionados em um único objeto.'},
+    {q:'Diferença principal entre Agrupamento e Soldagem?',opts:['São a mesma coisa','Agrupar organiza no Explorer; Soldar conecta fisicamente','Soldar organiza no Explorer; Agrupar conecta fisicamente','Nenhum afeta o gameplay'],c:1,fb:'Agrupar = organização no Explorer. Soldar = conecta fisicamente os Parts com o motor de física.'},
+    {q:'Quando usar um Constraint em vez de WeldConstraint?',opts:['Os Parts devem ficar permanentemente travados','É necessário movimento controlado (dobradiça, corda, deslizador)','Quer remover a conexão','Ambos os Parts estão ancorados'],c:1,fb:'Constraints permitem movimento controlado baseado em física. Welds são para conexões rígidas.'},
+    {q:'O que a ferramenta Negate faz?',opts:['Suaviza o Terrain','Inverte a posição','Transforma um Part em forma de corte para usar com Union','Remove material'],c:2,fb:'Negate transforma um Part em um \'cortador\' — ao fazer Union com outro Part, recorta-o.'},
+    {q:'Boa prática para organização do Explorer?',opts:['Manter todos os Parts desagrupados','Fazer Union de tudo imediatamente','Agrupar Parts relacionados em Models com nomes claros','Evitar o Explorer'],c:2,fb:'Models com nomes claros mantêm o Explorer organizado e facilitam trabalhar com objetos inteiros.'},
    ]
   },
   {id:3,emoji:'💻',title:'Fundamentos de Scripting',desc:'Bases de Lua, Script vs LocalScript, eventos, debounce, detecção de jogadores, leaderstats e depuração.',obj:'Entender e trabalhar com a lógica básica de scripting do Roblox.',color:'#F59E0B',
@@ -1102,11 +1102,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'Coin system for ALL players — which script type?',opts:['LocalScript','ModuleScript','Script (server)','Either works'],c:2,fb:'A server Script runs server-side and affects all players. LocalScript only affects the individual client.'},
-    {q:'Purpose of "debounce"?',opts:['Increases speed','Prevents function running multiple times simultaneously','Stops script entirely','Connects more events'],c:1,fb:'Debounce prevents the function being called again until the previous execution finishes.'},
-    {q:'`GetPlayerFromCharacter` returns what if the object is NOT a player?',opts:['Empty table','The character model','An error','nil'],c:3,fb:'Returns nil if no player matches. Always check `if not player then return end`.'},
-    {q:'Where should leaderstats setup Script go?',opts:['LocalScript in StarterGui','Script in ServerScriptService','LocalScript in StarterPlayerScripts','Anywhere'],c:1,fb:'leaderstats must be created server-side in ServerScriptService so it applies to all players.'},
-    {q:'What\'s wrong with: `if coins = 100 then`',opts:['coins should be capitalised','Should use == not = for comparison','Missing semicolon','Nothing'],c:1,fb:'Single = is assignment only. Double == is comparison. Always use == inside if conditions.'},
+    {q:'Sistema de moedas para TODOS os jogadores — qual tipo de script?',opts:['LocalScript','ModuleScript','Script (servidor)','Qualquer um funciona'],c:2,fb:'Um Script de servidor roda no servidor e afeta todos os jogadores. LocalScript afeta apenas o cliente local.'},
+    {q:'Propósito do \'debounce\'?',opts:['Aumenta a velocidade','Evita que a função rode múltiplas vezes simultaneamente','Para o script completamente','Conecta mais eventos'],c:1,fb:'Debounce evita que a função seja chamada novamente até que a execução anterior termine.'},
+    {q:'`GetPlayerFromCharacter` o que retorna se o objeto NÃO for um jogador?',opts:['Tabela vazia','O modelo do personagem','Um erro','nil'],c:3,fb:'Retorna nil se nenhum jogador corresponder. Sempre verifique `if not player then return end`.'},
+    {q:'Onde deve ir o Script de configuração dos leaderstats?',opts:['LocalScript no StarterGui','Script no ServerScriptService','LocalScript no StarterPlayerScripts','Em qualquer lugar'],c:1,fb:'leaderstats deve ser criado no servidor no ServerScriptService para se aplicar a todos os jogadores.'},
+    {q:'O que está errado em: `if coins = 100 then`',opts:['coins deveria ser capitalizado','Deveria usar == e não = para comparação','Falta ponto e vírgula','Nada'],c:1,fb:'= simples é apenas atribuição. == duplo é comparação. Sempre use == dentro de condicionais if.'},
    ]
   },
   {id:4,emoji:'🎬',title:'Animações e Movimento',desc:'Rotação contínua com loops, movimento suave A→B com TweenService e armadilhas comuns.',obj:'Criar animações simples e elementos dinâmicos.',color:'#8B5CF6',
@@ -1129,11 +1129,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'Platform should spin continuously forever. Best approach?',opts:['TweenService','A while loop updating Orientation','A single CFrame assignment','Animation Editor'],c:1,fb:'Continuous forever-looping motion = while loop. TweenService is for A→B motion.'},
-    {q:'For TweenService + Position to work, the part must be…',opts:['CanCollide = false','In ServerScriptService','Anchored','A sphere'],c:2,fb:'Physics fights TweenService on unanchored parts. Always anchor, or use CFrame.'},
-    {q:'RepeatCount = -1 in TweenInfo.new() means…',opts:['Plays once','Loops forever','Plays in reverse','Tween disabled'],c:1,fb:'-1 = loop forever. 0 = play once. Positive number = play that many extra times.'},
-    {q:'Which Vector3 makes a part spin left/right (Y axis)?',opts:['Vector3.new(2,0,0)','Vector3.new(0,0,2)','Vector3.new(0,2,0)','Vector3.new(2,2,2)'],c:2,fb:'Y axis = horizontal spin (left/right), like a rotating coin or platform.'},
-    {q:'Animating a door from closed to open. Use loop or TweenService?',opts:['While loop — simpler','TweenService — it\'s A→B motion','Either works','Neither'],c:1,fb:'Moving from A to B with a defined endpoint is exactly what TweenService is designed for.'},
+    {q:'Uma plataforma deve girar continuamente para sempre. Melhor abordagem?',opts:['TweenService','Um loop while atualizando Orientation','Uma única atribuição CFrame','Animation Editor'],c:1,fb:'Movimento contínuo para sempre = loop while. TweenService é para movimento A→B.'},
+    {q:'Para TweenService + Position funcionar, o Part deve estar…',opts:['CanCollide = false','No ServerScriptService','Ancorado','Ser uma esfera'],c:2,fb:'A física luta contra o TweenService em Parts não ancorados. Sempre ancore, ou use CFrame.'},
+    {q:'RepeatCount = -1 em TweenInfo.new() significa…',opts:['Reproduz uma vez','Repete para sempre','Reproduz ao contrário','Tween desativado'],c:1,fb:'-1 = repetir para sempre. 0 = reproduzir uma vez. Número positivo = reproduzir esse número de vezes extra.'},
+    {q:'Qual Vector3 faz um Part girar para esquerda/direita (eixo Y)?',opts:['Vector3.new(2,0,0)','Vector3.new(0,0,2)','Vector3.new(0,2,0)','Vector3.new(2,2,2)'],c:2,fb:'Eixo Y = giro horizontal (esquerda/direita), como uma moeda ou plataforma girando.'},
+    {q:'Animando uma porta de fechada para aberta. Loop ou TweenService?',opts:['Loop while — mais simples','TweenService — é movimento A→B','Qualquer um funciona','Nenhum'],c:1,fb:'Mover de A para B com um ponto final definido é exatamente para o que o TweenService foi projetado.'},
    ]
   },
   {id:5,emoji:'💎',title:'Publicação e Monetização',desc:'Publique seu jogo, configure as configurações, Game Pass vs Developer Product explicados.',obj:'Saber como publicar um jogo e explicar a monetização aos alunos.',color:'#EC4899',
@@ -1152,11 +1152,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'After first publishing, what must you do for players to find it?',opts:['It\'s automatically public','Make it public via Creator Dashboard','Publish again','Share the link'],c:1,fb:'Publishing and making public are two separate steps. Always go Creator Dashboard → Make Public after first publish.'},
-    {q:'Player buys +500 coins, uses them, wants more next week. What do you use?',opts:['Game Pass','Private Server','Developer Product','Free Model'],c:2,fb:'Developer Products are for repeatable purchases — perfect for consumable items like in-game currency.'},
-    {q:'Player pays for permanent VIP with extra speed. What do you use?',opts:['Developer Product','Private Server','Game Pass','Subscription'],c:2,fb:'Game Passes are for permanent, one-time purchases. The player buys it once and keeps it forever.'},
-    {q:'What is true about Servidores privados?',opts:['Must always cost Robux','Can be set to free and still drive engagement','Only developer can create them','Unlimited capacity'],c:1,fb:'Private servers can be free — developers often do this to attract more players.'},
-    {q:'Which Game Setting controls players per server?',opts:['Genre','Age Guidelines','Max Players','Game Description'],c:2,fb:'Max Players controls server capacity. Default is typically 10–20 players per server.'},
+    {q:'Após a primeira publicação, o que você deve fazer para os jogadores encontrarem?',opts:['É automaticamente público','Tornar público via Creator Dashboard','Publicar novamente','Compartilhar o link'],c:1,fb:'Publicar e tornar público são dois passos separados. Sempre vá ao Creator Dashboard.'},
+    {q:'Jogador compra +500 moedas, usa, quer mais na semana seguinte. O que você usa?',opts:['Game Pass','Servidor Privado','Developer Product','Free Model'],c:2,fb:'Developer Products são para compras repetíveis — perfeitos para itens consumíveis.'},
+    {q:'Jogador paga por VIP permanente com velocidade extra. O que você usa?',opts:['Developer Product','Servidor Privado','Game Pass','Assinatura'],c:2,fb:'Game Passes são para compras únicas e permanentes. O jogador compra uma vez e mantém para sempre.'},
+    {q:'O que é verdade sobre Servidores Privados?',opts:['Devem sempre custar Robux','Podem ser gratuitos e ainda gerar engajamento','Apenas o desenvolvedor pode criá-los','Capacidade ilimitada'],c:1,fb:'Servidores privados podem ser gratuitos — desenvolvedores frequentemente fazem isso para atrair mais jogadores.'},
+    {q:'Qual configuração do jogo controla jogadores por servidor?',opts:['Genre','Age Guidelines','Max Players','Game Description'],c:2,fb:'Max Players controla a capacidade do servidor. O padrão é normalmente 10–20 jogadores por servidor.'},
    ]
   },
   {id:6,emoji:'🎓',title:'Mentalidade do Tutor',desc:'Ensinar Roblox a crianças, usar analogias adequadas, guiar a depuração e aplicar o método Explique-Mostre-Faça.',obj:'Desenvolver a mentalidade e as habilidades necessárias para tutorar crianças em design de jogos.',color:'#EF4444',
@@ -1189,11 +1189,11 @@ const MODULES_EN=[
     ]},
    ],
    quiz:[
-    {q:'Student is stuck on a bug. Best first response?',opts:['Find and fix it immediately','Tell them to start over','Ask "what do you think the problem might be?"','Skip to next concept'],c:2,fb:'Always guide students to find the solution themselves first. Asking questions builds problem-solving skills.'},
-    {q:'Correct order of "Explain, Show, Do"?',opts:['Explain error, show fix, do it for them','Set context → demonstrate → let student try','Show examples → explain → test','Do → show result → explain'],c:1,fb:'Explain first (why it matters), then Show (demo yourself), then Do (hand control to student).'},
-    {q:'Which should you AVOID when teaching kids?',opts:['Using real-world analogies','Celebrating small wins','Using jargon without defining it','Asking "what do you think will happen?"'],c:2,fb:'Undefined jargon confuses kids. Always explain technical terms in plain, familiar language first.'},
-    {q:'Best way to explain "Anchoring" to a 10-year-old?',opts:['"It sets the Anchored property to True in the physics engine"','"It\'s like tying a balloon down so it stays no matter what"','"It disables the RigidBody for the BasePart"','"It prevents the part being selected"'],c:1,fb:'Real-world analogies (balloon + string) make abstract concepts instantly understandable for kids.'},
-    {q:'What matters MOST for being a good tutor?',opts:['Perfect technical knowledge','Speaking quickly','Problem-solving ability and willingness to learn','Never admitting you don\'t know something'],c:2,fb:'The best tutors are curious, patient problem-solvers — not those with the most technical knowledge.'},
+    {q:'Aluno está preso em um bug. Melhor primeira resposta?',opts:['Encontrar e resolver imediatamente','Dizer para recomeçar do zero','Perguntar: \'O que você acha que pode ser o problema?\'','Passar para o próximo conceito'],c:2,fb:'Sempre guie os alunos a encontrar a solução por conta própria primeiro. Perguntas constroem pensamento crítico.'},
+    {q:'Ordem correta de \'Explique, Mostre, Faça\'?',opts:['Explique o erro, mostre a correção, faça por eles','Estabeleça o contexto → demonstre → deixe o aluno tentar','Mostre exemplos → explique → teste','Faça → mostre o resultado → explique'],c:1,fb:'Primeiro explique (por que importa), depois mostre (demonstre você), depois faça (passe o controle ao aluno).'},
+    {q:'O que EVITAR ao ensinar crianças?',opts:['Usar analogias do mundo real','Celebrar pequenas conquistas','Usar jargão sem definir','Perguntar \'O que você acha que vai acontecer?\''],c:2,fb:'Jargão indefinido confunde crianças. Sempre explique termos técnicos em linguagem simples e familiar.'},
+    {q:'Melhor forma de explicar \'Ancoragem\' para uma criança de 10 anos?',opts:['\'Define a propriedade Anchored como True no motor de física\'','\'É como amarrar um balão para que fique no lugar não importa o que aconteça\'','\'Desativa o RigidBody para o BasePart\'','\'Impede que o Part seja selecionado\''],c:1,fb:'Analogias do mundo real (balão + fio) tornam conceitos abstratos imediatamente compreensíveis.'},
+    {q:'O que mais importa para ser um bom tutor?',opts:['Conhecimento técnico perfeito','Falar rápido','Capacidade de resolver problemas e vontade de aprender','Nunca admitir que não sabe algo'],c:2,fb:'Os melhores tutores são solucionadores de problemas curiosos e pacientes — não os que têm mais conhecimento técnico.'},
    ]
   }
 ]
