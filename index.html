@@ -91,12 +91,18 @@ body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans
     <div class="eyebrow">🎮 Tutor Training Program</div>
     <h1>Choose Your<br><span class="h-pill">Region</span><br>To Get Started</h1>
 
-    <div style="width:100%;max-width:720px;margin:28px auto 0;border-radius:14px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.18);border:2px solid var(--border);background:#000;">
-      <video controls preload="metadata" style="width:100%;display:block;">
-        <source src="intro.mp4" type="video/mp4">
-        <track src="intro.vtt" kind="subtitles" srclang="en" label="English" default>
-        Your browser does not support the video tag.
-      </video>
+    <div style="width:100%;max-width:720px;margin:28px auto 0;">
+      <button onclick="toggleIntroVideo(this)" style="display:flex;align-items:center;gap:8px;margin:0 auto;background:var(--surface);border:2px solid var(--border);border-radius:40px;padding:10px 22px;font-family:'Nunito',sans-serif;font-weight:900;font-size:14px;color:var(--text);cursor:pointer;transition:all .2s;box-shadow:var(--shadow);">
+        <span style="font-size:18px">▶</span>
+        <span class="intro-btn-label">Watch Before Starting</span>
+      </button>
+      <div id="intro-video-wrap" style="display:none;margin-top:14px;border-radius:14px;overflow:hidden;box-shadow:0 6px 32px rgba(0,0,0,.18);border:2px solid var(--border);background:#000;">
+        <video id="intro-video" controls preload="none" style="width:100%;display:block;">
+          <source src="intro.mp4" type="video/mp4">
+          <track src="intro.vtt" kind="subtitles" srclang="en" label="English" default>
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
 
     <p style="font-size:13px;color:var(--text2);margin-top:20px;margin-bottom:0;">⚠️ Each version has a different DST and class schedule. If you applied for a specific region, please use only that version. Your progress is saved per browser.</p>
@@ -201,7 +207,18 @@ const regionData={
   'pt.html':{flag:'[PT]',title:'Abrir Formação em Português',body:'Isso abrirá a trilha de formação para a região de língua portuguesa com seu próprio DST e cronograma. Certifique-se de ter se inscrito para a região em português antes de prosseguir.'},
   'id.html':{flag:'[ID]',title:'Buka Pelatihan Indonesia',body:'Ini akan membuka jalur pelatihan untuk wilayah Indonesia dengan DST dan jadwalnya sendiri. Pastikan Anda telah mendaftar untuk wilayah Indonesia sebelum melanjutkan.'},
 };
-let pendingUrl='';
+function toggleIntroVideo(btn){
+  const wrap = document.getElementById('intro-video-wrap');
+  const video = document.getElementById('intro-video');
+  const label = btn.querySelector('.intro-btn-label');
+  const icon = btn.querySelector('span:first-child');
+  const open = wrap.style.display === 'none';
+  wrap.style.display = open ? 'block' : 'none';
+  label.textContent = open ? 'Hide Intro Video' : 'Watch Before Starting';
+  icon.textContent = open ? '✕' : '▶';
+  if(!open){ video.pause(); }
+}
+
 function confirmNav(url){
   event.preventDefault();
   pendingUrl=url;
